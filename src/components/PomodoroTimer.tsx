@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { useInterval } from '../hooks/use-interval';
-import { secondsToTime } from '../utils/SecondsToTime';
+import { secondsToHours } from '../utils/SecondsToHours';
 import Button from './Button';
 import Timer from './Timer';
 
@@ -123,7 +123,7 @@ export function PomodoroTimer(props: Props): JSX.Element {
       </div>
       <div className="details">
         <p>Ciclos concluídos: {completedCycles}</p>
-        <p>Horas trabalhadas: {secondsToTime(fullWorkingTime)}</p>
+        <p>Horas trabalhadas: {secondsToHours(fullWorkingTime)}</p>
         <p>Pomodoros concluídos: {numberOfPomodoros}</p>
       </div>
     </div>
